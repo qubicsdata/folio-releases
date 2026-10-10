@@ -1,0 +1,13 @@
+{
+  "product": "folio",
+  "version": "1.1.1",
+  "release_repository": "qubicsdata/folio-releases",
+  "source_repository": "qubicsdata/folio-distribution",
+  "source_commit": "10bc00d2ba92e6bb715fc371fe8df04f41da78b2",
+  "source_dirty": false,
+  "license": "Apache-2.0",
+  "builds": "local only; GitHub Actions disabled",
+  "channel": "installation packages and documentation; application development source maintained separately",
+  "prior_release": "https://github.com/qubicsdata/folio-distribution/releases/tag/v1.1.0",
+  "package_identity": "Each standalone archive includes release.json and SHA256SUMS; published assets have independent SHA256SUMS. Homebrew bottles preserve the standalone payload."
+}
