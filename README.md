@@ -29,7 +29,7 @@ The [v1.1.1 release](https://github.com/qubicsdata/folio-releases/releases/tag/v
 
 The Homebrew macOS bottles target macOS 27. Other supported macOS versions can use the matching standalone archive, subject to its runtime requirements. macOS ARM64 and Linux ARM64 checks run natively; x64 checks use Rosetta and full-system QEMU TCG. Exact platform and test scopes are recorded in each release's evidence.
 
-Download installers from the release's Assets list. Extract the matching `folio-1.1.1-<platform>-<architecture>.tar.gz`, then follow `INSTALL.md` inside it; the bundled Python runtime runs the installer, so a system Python is not required. GitHub's automatically generated repository archives contain these distribution documents. Development source exports, wheels, source distributions and npm development packages are not installation assets in this channel. Packaged application code can remain readable, including Python and JavaScript; this distribution does not promise obfuscation.
+Download installers from the release's Assets list. Extract the matching `folio-1.1.1-<platform>-<architecture>.tar.gz`, then follow `README.txt` inside it; the bundled Python runtime runs the installer, so a system Python is not required. GitHub's automatically generated repository archives contain these distribution documents. Development source exports, wheels, source distributions and npm development packages are not installation assets in this channel. Packaged application code can remain readable, including Python and JavaScript; this distribution does not promise obfuscation.
 
 ## Update and remove
 
