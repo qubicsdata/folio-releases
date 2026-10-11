@@ -20,7 +20,7 @@ Download assets over HTTPS from this repository. Verify the selected archive and
 
 GitHub secret scanning and push protection are enabled. The default branch is protected against force pushes and deletion, and version tags against modification and deletion. GitHub Actions is disabled; packages are built and tested locally. Private vulnerability reporting is enabled.
 
-Release immutability was enabled after Folio 1.1.1 and Switchboard 2.0.1 were published. It applies to Folio 1.1.2 when published and subsequent releases, not those existing releases. Maintainers must assemble and verify all assets in a draft before publishing a new immutable release. Correct a released package with a new version; preserve old version identities.
+Release immutability was enabled after Folio 1.1.1 and Switchboard 2.0.1 were published. It applies to the published immutable Folio 1.1.2 release and subsequent releases, not those existing releases. Maintainers must assemble and verify all assets in a draft before publishing a new immutable release. Correct a released package with a new version; preserve old version identities.
 
 ## Handling reports and compromised releases
 

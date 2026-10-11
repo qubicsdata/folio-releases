@@ -66,4 +66,4 @@ Use [this repository's issues](https://github.com/qubicsdata/folio-releases/issu
 
 Report security vulnerabilities through [private vulnerability reporting](https://github.com/qubicsdata/folio-releases/security/advisories/new), rather than a public issue. See the [security policy](SECURITY.md).
 
-All packages are built locally. GitHub Actions is disabled. Folio 1.1.2 will be immutable when published; prior 1.1.1 assets and tags remain unchanged. Earlier releases and development histories are preserved in their original repositories.
+All packages are built locally. GitHub Actions is disabled. Folio 1.1.2 is an immutable published release; prior 1.1.1 assets and tags remain unchanged. Earlier releases and development histories are preserved in their original repositories.

@@ -14,7 +14,7 @@
     "public Homebrew tap"
   ],
   "download_authentication": "none; ordinary public HTTPS; no GitHub token required",
-  "publication_status": "prepublication local acceptance; anonymous published download proof will be recorded separately in DELIVERY/main after immutable publication",
+  "publication_status": "published immutable release; anonymous download and Homebrew proof verified after publication",
   "owner_web_authentication": {
     "private_discovery_mode": "0600",
     "all_api_reads_and_writes_authenticated": true,
@@ -116,7 +116,48 @@
       "macos_original_formula_test_blocks": true,
       "macos_stock_brew_test": "Blocked before product tests by host CLT14.3.1 versus required27.0"
     },
-    "anonymous_published_download": "not yet executed; will be recorded separately after immutable publication"
+    "anonymous_published_download": {
+      "ok": true,
+      "tested_at": "2026-10-11T01:11:44Z",
+      "platform": "darwin-arm64",
+      "execution": "native macOS 27",
+      "homebrew_version": "Homebrew 7.0.6\nHomebrew/homebrew-core N/A",
+      "tap_repository": "qubicsdata/homebrew-tap",
+      "tap_commit": "d2c1bd3e6107f0d4ad7310e1146f69241c7b0537",
+      "tap_formula_sha256": "5b0063439d21d4649e07f4dc1d537e9b7ddc6b8b82771ce297f3813fa3d714fc",
+      "folio_tap_formula_sha256": "59d0680d31bee09ef5fda5f7b14a46e4a42ed301e41246e97d2c3505ced95ee9",
+      "strategy_sha256": "e455e992349b182e59ebf7fcce934aca60ad0cb4f0ffae5b98d1ea6d9152fc28",
+      "tap_clone": "Anonymous HTTPS clone with credential helpers and inherited Git config disabled",
+      "downloads": "Actual anonymous public HTTPS release asset fetch from empty task bottle cache; no GitHub token; normal Homebrew SHA-256 enforcement",
+      "products": [
+        {
+          "product": "switchboard",
+          "version": "2.0.2",
+          "normal_brew_install": true,
+          "poured_from_bottle": true,
+          "unmodified_formula_test_block": true,
+          "post_pour_payload_integrity": true,
+          "embedded_formula_loader": true,
+          "downloaded_bottle_sha256": "d9b05f3d1d5b9196367821a020256db1695cd9159eabe008e098d695e753c5e1"
+        },
+        {
+          "product": "folio-workspace",
+          "version": "1.1.2",
+          "normal_brew_install": true,
+          "poured_from_bottle": true,
+          "unmodified_formula_test_block": true,
+          "post_pour_payload_integrity": true,
+          "embedded_formula_loader": true,
+          "downloaded_bottle_sha256": "76bbca090b036428584b83e61d9d07532a1d2ab20b4215f4ac258a92f3361177"
+        }
+      ],
+      "same_prefix_coinstall": true,
+      "service_path_metadata": true,
+      "shared_helper_link_absent": true,
+      "live_apps_or_homes_modified": false,
+      "services_started": false,
+      "assurance_limit": "Native Mac ARM anonymous public remote fetch/pour; other target normal cached pours documented separately. Stock macOS brew test compiler setup unavailable with host CLT14.3; unchanged formula test blocks executed via Formula#run_test."
+    }
   },
   "execution": {
     "darwin-arm64": "native macOS ARM64",
@@ -124,5 +165,201 @@
     "linux-arm64": "native Linux ARM64 in Lima",
     "linux-x64-emulated": "Linux x64 under full-system qemu-system-x86_64 11.0.3 TCG on ARM64 host"
   },
-  "live_apps_or_homes_modified": false
+  "live_apps_or_homes_modified": false,
+  "publication": {
+    "published": true,
+    "immutable": true,
+    "tag": "v1.1.2",
+    "tag_commit": "78d570e0ed80a93e552f8a42061621ea6a7b32d0",
+    "release_asset_count": 25,
+    "release_url": "https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.2",
+    "github_release_attestation_verified": true,
+    "attestation_subjects_match_all_local_assets": true,
+    "attestation_signer": "https://dotcom.releases.github.com",
+    "anonymous_downloads": {
+      "ok": true,
+      "folio_assets": 25,
+      "combined_product_assets": 66,
+      "combined_product_bytes": 842726661,
+      "all_local_and_github_api_digests_match": true,
+      "assets": [
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-acceptance-evidence.tar.gz",
+          "bytes": 1382172,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-acceptance-evidence.tar.gz.sha256",
+          "bytes": 105,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-darwin-arm64.tar.gz",
+          "bytes": 25178653,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-darwin-arm64.tar.gz.sha256",
+          "bytes": 98,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-darwin-x64.tar.gz",
+          "bytes": 24986628,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-darwin-x64.tar.gz.sha256",
+          "bytes": 96,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-linux-arm64.tar.gz",
+          "bytes": 29157040,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-linux-arm64.tar.gz.sha256",
+          "bytes": 97,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-linux-x64.tar.gz",
+          "bytes": 34776609,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-linux-x64.tar.gz.sha256",
+          "bytes": 95,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-sbom.cdx.json",
+          "bytes": 8667,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-1.1.2-sbom.cdx.json.sha256",
+          "bytes": 92,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.arm64_golden_gate.bottle.tar.gz",
+          "bytes": 25264761,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.arm64_golden_gate.bottle.tar.gz.sha256",
+          "bytes": 120,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.arm64_linux.bottle.tar.gz",
+          "bytes": 29310455,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.arm64_linux.bottle.tar.gz.sha256",
+          "bytes": 114,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.golden_gate.bottle.tar.gz",
+          "bytes": 25061853,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.golden_gate.bottle.tar.gz.sha256",
+          "bytes": 114,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.x86_64_linux.bottle.tar.gz",
+          "bytes": 34926356,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "folio-workspace-1.1.2.x86_64_linux.bottle.tar.gz.sha256",
+          "bytes": 115,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "release-evidence.json",
+          "bytes": 41360,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "release-evidence.json.sha256",
+          "bytes": 88,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "SHA256SUMS",
+          "bytes": 2538,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "standalone-provenance.json",
+          "bytes": 4868,
+          "match": true,
+          "api_digest_match": true
+        },
+        {
+          "repo": "folio-releases",
+          "name": "standalone-provenance.json.sha256",
+          "bytes": 93,
+          "match": true,
+          "api_digest_match": true
+        }
+      ]
+    },
+    "immutable_assets_unchanged": true
+  }
 }
