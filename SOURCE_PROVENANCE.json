@@ -1,13 +1,17 @@
 {
   "product": "folio",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "release_repository": "qubicsdata/folio-releases",
   "source_repository": "qubicsdata/folio-distribution",
-  "source_commit": "10bc00d2ba92e6bb715fc371fe8df04f41da78b2",
+  "source_commit": "07f0b5b5add879e5d849a5b4a1b7206cdf3c011f",
   "source_dirty": false,
   "license": "Apache-2.0",
   "builds": "local only; GitHub Actions disabled",
   "channel": "installation packages and documentation; application development source maintained separately",
-  "prior_release": "https://github.com/qubicsdata/folio-distribution/releases/tag/v1.1.0",
-  "package_identity": "Each standalone archive includes release.json and SHA256SUMS; published assets have independent SHA256SUMS. Homebrew bottles preserve the standalone payload."
+  "prior_release": "https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.1",
+  "package_identity": "Each standalone archive includes release.json and SHA256SUMS; published assets have independent SHA256SUMS. Homebrew bottles preserve the standalone payload.",
+  "download_authentication": "none; public GitHub release assets and public Homebrew tap",
+  "source_visibility": "private",
+  "release_visibility": "public",
+  "publication_sequence": "Local validation and upload verification before immutable publication; anonymous published download receipt recorded separately in DELIVERY/main afterward"
 }

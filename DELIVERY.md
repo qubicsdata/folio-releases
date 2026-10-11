@@ -1,17 +1,19 @@
-# Folio 1.1.1 delivery receipt
+# Folio 1.1.2 delivery receipt
 
-Folio 1.1.1 adds role-neutral workspace copy and tasteful About credits with the version, QubicsData website, and exact local Apache-2.0 LICENSE and NOTICE text. The license remains Apache-2.0; the informational attribution adds no new restrictions.
+Folio 1.1.2 authenticates every API read and write. The CLI reads a private owner credential; browsers exchange a launch fragment for an HttpOnly, SameSite=Strict cookie and an origin-scoped proof. Both browser factors are required. The fragment is cleared before rendering; authenticated downloads, CSRF, Host/Origin checks and repeated-tab access passed. The same OS account remains the trust boundary.
 
-The immutable application source is `10bc00d2ba92e6bb715fc371fe8df04f41da78b2` in the private `qubicsdata/folio-distribution` repository. All eight binary assets were built locally from that clean source. The installation channel is the private [Folio release repository](https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.1) and `qubicsdata/homebrew-tap`. GitHub Actions is disabled. Wheels, source distributions and source exports are not installation assets.
+All eight binary assets were built locally from clean private source `07f0b5b5add879e5d849a5b4a1b7206cdf3c011f`. Installation assets and the Homebrew tap are public and need no GitHub credentials. Apache-2.0 and QubicsData attribution remain unchanged. Existing releases/tags are unchanged; Actions is disabled.
 
-Validation completed:
+Validation completed before publication:
 
-- Python 3.9.6 suite: 379 tests, 372 passed, 7 optional daemon tests skipped.
-- Both installed paired modes: 7 scenarios each, 14 passed with zero skips, against Switchboard 2.0.1 source `c3fa728f6f6e44bfd4a16adc8ece7d1cf2d60019`, using production encrypted-file vault settings.
-- All four standalone packages: 16 checks each, including genuine released 1.1.0 upgrade and retained-data uninstall/reinstall.
-- Installed native macOS browser: 14 workflows, About legal links, both themes and mobile About layout passed.
-- All four Homebrew targets:normal bottle pours, complete payload verification, actual embedded formula loaders, effective service PATH, CLI versions and coexistence with final Switchboard passed. Both Linux targets passed stock `brew test`. On macOS, the original formula test blocks passed through Homebrew’s API; stock `brew test` stops before the product test because host CLT 14.3.1 is older than the required 27.0.
+- Python 3.9.6: 391 tests, 384 passed, 7 optional daemon cases skipped. Eleven focused owner-auth tests passed.
+- Both installed paired modes: seven scenarios each, zero skips, against Switchboard 2.0.2 source `f4875e043a37d7e1d6f19dc37ef6b21d284a116d`, with production encrypted-file vault settings and no OS credential-store entries.
+- Four standalone packages: 17 checks each, including private owner/browser authentication, genuine 1.1.1 upgrade and retained-data uninstall/reinstall.
+- Installed native Mac browser: 14 workflows, fragment clearing, proof reload, both themes, About and mobile layout passed.
+- Four Homebrew targets: normal pours, unchanged formula tests, complete payload integrity, actual embedded formula loaders, service PATH and same-prefix Switchboard coexistence passed. Both Linux targets passed stock `brew test`; macOS stock test stops before the product test on the host's outdated CLT. The original formula test blocks passed through Homebrew's API.
 
-ARM64 checks were native. macOS x64 used Rosetta; Linux x64 used full-system QEMU 11.0.3 TCG. These are translated acceptance results, not native Intel results. macOS packages are unsigned and unnotarized as selected for private distribution. No live user home, app, service or account was modified. Live model-provider calls and native destination desktop dialogs were not exercised.
+Native ARM64 tests used macOS and Linux in Lima. Intel tests used Rosetta and full-system QEMU 11.0.3 TCG, not native Intel hardware. macOS packages are unsigned and unnotarized. Live model-provider calls and native destination dialogs were not exercised. No live app, user home, service or account was modified.
 
-The accompanying JSON lists exact binary hashes. Release evidence contains sanitized receipts, screenshots, runtime provenance, retained upstream notices and a schema-validated scoped CycloneDX SBOM. After publication, authenticated Homebrew installation from an empty cache passed on native macOS ARM64 for Folio 1.1.1 and Switchboard 2.0.1. A fresh HTTPS clone of tap `ffef6ae03418658917e1c5f4efc5cd777693d196` fetched both exact private GitHub release bottles. Normal pours, unchanged formula test blocks, full payload verification, embedded formula loaders and same-prefix coexistence passed. The downloaded Folio bottle SHA-256 was `240b73e607353e7d090b15e262977069f60169c1a46b2dca0cbaec58b953717d`. No live apps or homes were modified.
+A candidate native Linux run correctly refused a synthetic workspace created as 0775 under umask 002. Product Store already creates new roots as 0700. The tracked verifier fixture now explicitly creates a private workspace; tests confirm private creation under umask 002 and refusal of existing group-writable roots. Final packages were rebuilt from the corrected clean source; original failure logs remain local audit evidence.
+
+The release evidence includes sanitized receipts, screenshots, runtime provenance, upstream notices and a schema-validated scoped CycloneDX SBOM. Publication is pending. Anonymous download/pour proof will be recorded in DELIVERY on repository main after immutable publication, without changing the tag or release assets.

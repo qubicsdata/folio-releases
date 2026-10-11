@@ -27,15 +27,21 @@ If an older installation appears first on PATH, use `$(brew --prefix)/bin/folio 
 
 ## Packages
 
-The [v1.1.1 release](https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.1) contains standalone archives and Homebrew bottles for macOS and glibc Linux, on ARM64 and x64. Runtimes are bundled. SHA-256 checksums, license notices, source/build provenance and validation evidence accompany the packages.
+The [v1.1.2 release](https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.2) provides standalone archives and Homebrew bottles for macOS and glibc Linux, on ARM64 and x64. Runtimes are bundled. SHA-256 checksums, license notices, source/build provenance and validation evidence accompany the packages.
 
 The Homebrew macOS bottles target macOS 27. Other supported macOS versions can use the matching standalone archive, subject to its runtime requirements. macOS ARM64 and Linux ARM64 checks run natively; x64 checks use Rosetta and full-system QEMU TCG. Exact platform and test scopes are recorded in each release's evidence.
 
-Download installers from the release's Assets list. Extract the matching `folio-1.1.1-<platform>-<architecture>.tar.gz`, then follow `README.txt` inside it; the bundled Python runtime runs the installer, so a system Python is not required. GitHub's automatically generated repository archives contain these distribution documents. Development source exports, wheels, source distributions and npm development packages are not installation assets in this channel. Packaged application code can remain readable, including Python and JavaScript; this distribution does not promise obfuscation.
+Download installers from the release's Assets list. Extract the matching `folio-1.1.2-<platform>-<architecture>.tar.gz`, then follow `README.txt` inside it; the bundled Python runtime runs the installer, so a system Python is not required. GitHub's automatically generated repository archives contain these distribution documents. Development source exports, wheels, source distributions and npm development packages are not installation assets in this channel. Packaged application code can remain readable, including Python and JavaScript; this distribution does not promise obfuscation.
+
+## Local browser access
+
+Folio 1.1.2 authenticates every local API read and write. Run `folio ui` to open an authorized browser tab; the private launch fragment is cleared before the workspace renders. The browser uses an HttpOnly, SameSite=Strict cookie together with an origin-scoped session proof. Reloading and opening another authorized tab retain access. CLI commands load an owner-only credential from the workspace rather than an unauthenticated HTTP endpoint. Server restarts require a new `folio ui` launch.
+
+`folio ui --no-open` and server commands print credential-free addresses. Opening that address directly does not grant API access; use `folio ui` to sign in. Keep the server on loopback. This boundary does not isolate programs already running as the same operating-system account. Open only trusted project folders and backups; see [the security policy](SECURITY.md).
 
 ## Update and remove
 
-Back up your workspace and finish active work before upgrading. Stop the running application or its Homebrew service, then run:
+Back up your workspace and finish active work before upgrading. Stop the running application using its currently installed `folio server-stop` command, or stop its Homebrew service, before installing the new version. The new CLI cannot use a legacy server without private owner discovery. Then run:
 
 ```sh
 brew update
@@ -60,4 +66,4 @@ Use [this repository's issues](https://github.com/qubicsdata/folio-releases/issu
 
 Report security vulnerabilities through [private vulnerability reporting](https://github.com/qubicsdata/folio-releases/security/advisories/new), rather than a public issue. See the [security policy](SECURITY.md).
 
-All packages are built locally. GitHub Actions is disabled. Earlier releases and development histories are preserved in their original repositories.
+All packages are built locally. GitHub Actions is disabled. Folio 1.1.2 will be immutable when published; prior 1.1.1 assets and tags remain unchanged. Earlier releases and development histories are preserved in their original repositories.

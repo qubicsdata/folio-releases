@@ -8,7 +8,9 @@ This repository is public. Private reports are visible to the repository's secur
 
 ## Scope and support
 
-Official Folio packages, installers, and bundled first-party components are in scope. The latest patch release receives security fixes; install updates from this repository's Releases page or the QubicsData Homebrew tap if you have access. Third-party agents, tools, and extensions have their own maintainers and permissions.
+Official Folio packages, installers, and bundled first-party components are in scope. The latest patch release receives security fixes; install updates from this repository's Releases page or the public QubicsData Homebrew tap; installation downloads require no GitHub account or token. Third-party agents, tools, and extensions have their own maintainers and permissions.
+
+Folio 1.1.2 requires an owner credential for CLI API access, or both an HttpOnly session cookie and an origin-scoped browser proof. Server discovery credentials are stored in an owner-only file. Use `folio ui` to authorize a browser; do not share launch fragments or workspace discovery files.
 
 Folio runs with the operating-system user's privileges. Use separate operating-system accounts or isolated environments for mutually untrusted users, agents, and projects. Application permissions do not sandbox arbitrary native programs with the same account's filesystem access. Keep local application ports on loopback; do not expose them through a reverse proxy, public tunnel, or port forwarding.
 
@@ -18,7 +20,7 @@ Download assets over HTTPS from this repository. Verify the selected archive and
 
 GitHub secret scanning and push protection are enabled. The default branch is protected against force pushes and deletion, and version tags against modification and deletion. GitHub Actions is disabled; packages are built and tested locally. Private vulnerability reporting is enabled.
 
-Release immutability was enabled after Folio 1.1.1 and Switchboard 2.0.1 were published. It applies to future releases, not those existing releases. Maintainers must assemble and verify all assets in a draft before publishing a new immutable release. Correct a released package with a new version; preserve old version identities.
+Release immutability was enabled after Folio 1.1.1 and Switchboard 2.0.1 were published. It applies to Folio 1.1.2 when published and subsequent releases, not those existing releases. Maintainers must assemble and verify all assets in a draft before publishing a new immutable release. Correct a released package with a new version; preserve old version identities.
 
 ## Handling reports and compromised releases
 
