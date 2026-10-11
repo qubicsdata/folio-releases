@@ -1,0 +1,150 @@
+{
+  "product": "Folio",
+  "version": "1.1.1",
+  "source_commit": "10bc00d2ba92e6bb715fc371fe8df04f41da78b2",
+  "source_repository": "qubicsdata/folio-distribution",
+  "artifact_repository": "qubicsdata/folio-releases",
+  "release": "https://github.com/qubicsdata/folio-releases/releases/tag/v1.1.1",
+  "license": "Apache-2.0",
+  "attribution": "Originally developed by QubicsData",
+  "website": "https://qubicsdata.com",
+  "builds": "Local; GitHub Actions disabled",
+  "artifacts": [
+    {
+      "name": "folio-1.1.1-darwin-arm64.tar.gz",
+      "sha256": "e59cce3dbd38b2bfab0890a5a724d2ab0b2a4cd8f956ef7ae385812b593a0187",
+      "bytes": 25175694
+    },
+    {
+      "name": "folio-1.1.1-darwin-x64.tar.gz",
+      "sha256": "c5a97307f706fc1031af1ff70e8b811d47d47f1d8a9f3d504c56cc7259f92dec",
+      "bytes": 24983422
+    },
+    {
+      "name": "folio-1.1.1-linux-arm64.tar.gz",
+      "sha256": "c39de1c3744bf4a1c1245c8216a1e3299501aa911585f0da6e236255788aabca",
+      "bytes": 29154328
+    },
+    {
+      "name": "folio-1.1.1-linux-x64.tar.gz",
+      "sha256": "12acdd8006777986f48af69779d900d1da114f79afa7d0683ac9babe3a40c011",
+      "bytes": 34773684
+    },
+    {
+      "name": "folio-workspace-1.1.1.arm64_golden_gate.bottle.tar.gz",
+      "sha256": "240b73e607353e7d090b15e262977069f60169c1a46b2dca0cbaec58b953717d",
+      "bytes": 25258157
+    },
+    {
+      "name": "folio-workspace-1.1.1.arm64_linux.bottle.tar.gz",
+      "sha256": "a21642369eeeced21fa9814424a3bda43b297ffcbf98f56a6cef34c5e6f5a0f1",
+      "bytes": 29303737
+    },
+    {
+      "name": "folio-workspace-1.1.1.golden_gate.bottle.tar.gz",
+      "sha256": "211e699f9d1e56c4cd23e58e9b4c6adbabc7415c6fdbaa41397f606c3010481b",
+      "bytes": 25058403
+    },
+    {
+      "name": "folio-workspace-1.1.1.x86_64_linux.bottle.tar.gz",
+      "sha256": "cb7ea32dd52d70c8d3683fc07143f709323d0bfafd003746446e873ddaa89ea3",
+      "bytes": 34919605
+    }
+  ],
+  "validation": {
+    "python_suite": {
+      "tests_run": 379,
+      "passed": 372,
+      "optional_skipped": 7
+    },
+    "standalone": {
+      "targets": 4,
+      "checks_per_target": 16,
+      "previous_release": "1.1.0",
+      "all_passed": true
+    },
+    "paired": {
+      "switchboard_version": "2.0.1",
+      "switchboard_source_commit": "c3fa728f6f6e44bfd4a16adc8ece7d1cf2d60019",
+      "internal_wheel": 7,
+      "standalone": 7,
+      "skipped": 0,
+      "all_passed": true
+    },
+    "installed_browser": {
+      "workflows": 14,
+      "all_passed": true,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "mobile_about": true
+    },
+    "homebrew": {
+      "targets": 4,
+      "normal_pours": true,
+      "payload_integrity": true,
+      "same_prefix_coinstall_with_switchboard": true,
+      "embedded_formula_loaders": true,
+      "linux_stock_brew_tests": true,
+      "macos_original_formula_test_blocks": true,
+      "macos_stock_brew_test": "Blocked before product tests by host CLT14.3.1 versus required27.0"
+    },
+    "authenticated_remote_homebrew": {
+      "ok": true,
+      "tested_at": "2026-10-11T00:14:09Z",
+      "platform": "darwin-arm64",
+      "execution": "native macOS 27",
+      "homebrew_version": "Homebrew 7.0.6\nHomebrew/homebrew-core N/A",
+      "tap_repository": "qubicsdata/homebrew-tap",
+      "tap_commit": "ffef6ae03418658917e1c5f4efc5cd777693d196",
+      "tap_formula_sha256": "3484397b2787f82a333ee50f9223902ccc2f14d4a7d7effd4430312f21e24e86",
+      "folio_tap_formula_sha256": "f3b6c5237c5bc5c42d63d3b22b1be34bcbd2f5371a3db6b3036c2c2a44cc6a58",
+      "strategy_sha256": "e455e992349b182e59ebf7fcce934aca60ad0cb4f0ffae5b98d1ea6d9152fc28",
+      "tap_clone": "HTTPS clone with existing GitHub CLI credential helper; existing credential passed only through process environment because acceptance isolates HOME",
+      "downloads": "actual authenticated private GitHub API release asset fetch from empty task bottle cache; normal Homebrew SHA-256 enforcement",
+      "products": [
+        {
+          "product": "switchboard",
+          "version": "2.0.1",
+          "normal_brew_install": true,
+          "poured_from_bottle": true,
+          "unmodified_formula_test_block": true,
+          "post_pour_payload_integrity": true,
+          "embedded_formula_loader": true,
+          "downloaded_bottle_sha256": "fecbc30d62eda80f90beaefd183ee2bd6a22fcb530dcd65b834d1042b6667d0c"
+        },
+        {
+          "product": "folio-workspace",
+          "version": "1.1.1",
+          "normal_brew_install": true,
+          "poured_from_bottle": true,
+          "unmodified_formula_test_block": true,
+          "post_pour_payload_integrity": true,
+          "embedded_formula_loader": true,
+          "downloaded_bottle_sha256": "240b73e607353e7d090b15e262977069f60169c1a46b2dca0cbaec58b953717d"
+        }
+      ],
+      "same_prefix_coinstall": true,
+      "service_path_metadata": true,
+      "shared_helper_link_absent": true,
+      "live_apps_or_homes_modified": false,
+      "services_started": false,
+      "assurance_limit": "Native Mac ARM authenticated remote fetch/pour; other target normal cached pours documented separately. Stock macOS brew test compiler setup unavailable with host CLT14.3; unchanged formula test blocks executed via Formula#run_test."
+    }
+  },
+  "execution": {
+    "darwin-arm64": "native",
+    "linux-arm64": "native ARM64 Linux in Lima",
+    "darwin-x64": "Rosetta on ARM64 macOS27",
+    "linux-x64": "full-system QEMU11.0.3 TCG on ARM64 host"
+  },
+  "distribution_scope": "Four standalone archives and four bottles; internal wheel is test-only and not a release asset",
+  "limits": [
+    "macOS unsigned and unnotarized",
+    "No native Intel hardware acceptance",
+    "No live model-provider calls or native destination desktop dialogs",
+    "Authenticated remote fetch/pour was native macOS ARM64; other targets have separate normal cached-pour acceptance"
+  ],
+  "live_apps_or_homes_modified": false
+}
