@@ -4,11 +4,15 @@ A local workspace for planning and coordinating work across projects.
 
 Originally developed by [QubicsData](https://qubicsdata.com). Licensed under [Apache-2.0](LICENSE).
 
-This repository provides ready-to-install Folio packages for macOS and Linux. Application development repositories are maintained separately. All repositories remain private for this delivery.
+This public repository provides ready-to-install Folio packages for macOS and Linux. Application development repositories remain private and are maintained separately.
 
 ## Install and open
 
-Your GitHub account needs read access to this repository and `qubicsdata/homebrew-tap`.
+Download the matching standalone archive and its `.sha256` file from the [latest release](https://github.com/qubicsdata/folio-releases/releases/latest). No GitHub account is required. Verify the archive before extracting it: use `shasum -a 256 -c ARCHIVE.tar.gz.sha256` on macOS or `sha256sum -c ARCHIVE.tar.gz.sha256` on Linux, substituting the downloaded checksum filename. Follow `README.txt` inside the verified archive. The Python runtime is bundled.
+
+### Homebrew for tap collaborators
+
+The Homebrew tap remains private. This alternative requires a GitHub account with read access to `qubicsdata/homebrew-tap`:
 
 ```sh
 gh auth login
@@ -19,7 +23,7 @@ brew install qubicsdata/tap/folio-workspace
 folio ui
 ```
 
-`brew trust` is available in Homebrew 7; earlier versions may not need this step. Private asset downloads use your existing GitHub CLI sign-in or `HOMEBREW_GITHUB_API_TOKEN`. Credentials stay out of repository URLs and formula files. Read access to the application development repository is not required for installation.
+`brew trust` is available in Homebrew 7; earlier versions may not need this step. The tap's download strategy can use your existing GitHub CLI sign-in or `HOMEBREW_GITHUB_API_TOKEN`. Credentials stay out of repository URLs and formula files. Read access to the application development repository is not required for installation.
 
 If an older installation appears first on PATH, use `$(brew --prefix)/bin/folio ui` to open the Homebrew version. Installation does not launch services or move existing workspaces.
 
@@ -55,5 +59,7 @@ The About screen identifies QubicsData in our official builds. This is an inform
 ## Support
 
 Use [this repository's issues](https://github.com/qubicsdata/folio-releases/issues) for installation problems and bug reports. Include the application version, operating system, architecture, and steps to reproduce. Review diagnostics before sharing; omit credentials and private project data.
+
+Report security vulnerabilities through [private vulnerability reporting](https://github.com/qubicsdata/folio-releases/security/advisories/new), rather than a public issue. See the [security policy](SECURITY.md).
 
 All packages are built locally. GitHub Actions is disabled. Earlier releases and development histories are preserved in their original repositories.
