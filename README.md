@@ -10,20 +10,18 @@ This public repository provides ready-to-install Folio packages for macOS and Li
 
 Download the matching standalone archive and its `.sha256` file from the [latest release](https://github.com/qubicsdata/folio-releases/releases/latest). No GitHub account is required. Verify the archive before extracting it: use `shasum -a 256 -c ARCHIVE.tar.gz.sha256` on macOS or `sha256sum -c ARCHIVE.tar.gz.sha256` on Linux, substituting the downloaded checksum filename. Follow `README.txt` inside the verified archive. The Python runtime is bundled.
 
-### Homebrew for tap collaborators
+### Homebrew
 
-The Homebrew tap remains private. This alternative requires a GitHub account with read access to `qubicsdata/homebrew-tap`:
+The Homebrew tap is public. Install without GitHub credentials:
 
 ```sh
-gh auth login
-gh auth setup-git
 brew tap qubicsdata/tap https://github.com/qubicsdata/homebrew-tap.git
 brew trust qubicsdata/tap
 brew install qubicsdata/tap/folio-workspace
 folio ui
 ```
 
-`brew trust` is available in Homebrew 7; earlier versions may not need this step. The tap's download strategy can use your existing GitHub CLI sign-in or `HOMEBREW_GITHUB_API_TOKEN`. Credentials stay out of repository URLs and formula files. Read access to the application development repository is not required for installation.
+`brew trust` is available in Homebrew 7; earlier versions may not need this step. Public downloads use Homebrew’s standard HTTPS downloader with pinned SHA-256 hashes. Read access to the application development repository is not required for installation.
 
 If an older installation appears first on PATH, use `$(brew --prefix)/bin/folio ui` to open the Homebrew version. Installation does not launch services or move existing workspaces.
 
